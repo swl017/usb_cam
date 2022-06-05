@@ -491,6 +491,7 @@ int UsbCam::read_frame()
   switch (io_)
   {
     case IO_METHOD_READ:
+    /** todo **/
       len = read(fd_, buffers_[0].start, buffers_[0].length);
       if (len == -1)
       {
@@ -703,6 +704,7 @@ void UsbCam::uninit_device(void)
 
 void UsbCam::init_read(unsigned int buffer_size)
 {
+  /** todo **/
   buffers_ = (buffer*)calloc(1, sizeof(*buffers_));
 
   if (!buffers_)
